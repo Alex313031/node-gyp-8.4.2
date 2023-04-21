@@ -1,0 +1,51 @@
+{
+  "name": "node-gyp",
+  "description": "Node.js native addon build tool",
+  "license": "MIT",
+  "keywords": [
+    "native",
+    "addon",
+    "module",
+    "c",
+    "c++",
+    "compiler",
+    "bindings",
+    "gyp"
+  ],
+  "version": "8.4.2",
+  "installVersion": 9,
+  "author": "Alex313031 <Alex313031@gmail.com> (https://thorium.rocks/)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nodejs/node-gyp.git"
+  },
+  "preferGlobal": true,
+  "bin": "./bin/node-gyp.js",
+  "main": "./lib/node-gyp.js",
+  "dependencies": {
+    "env-paths": "^2.2.1",
+    "glob": "^7.2.0",
+    "graceful-fs": "^4.2.11",
+    "make-fetch-happen": "^9.1.0",
+    "nopt": "^5.0.0",
+    "npmlog": "^6.0.2",
+    "rimraf": "^3.0.2",
+    "semver": "^7.3.8",
+    "tar": "^6.1.13",
+    "which": "^2.0.2"
+  },
+  "engines": {
+    "node": ">= 10.12.0"
+  },
+  "devDependencies": {
+    "bindings": "^1.5.0",
+    "nan": "^2.14.2",
+    "require-inject": "^1.4.4",
+    "standard": "^14.3.4",
+    "tap": "^12.7.0"
+  },
+  "scripts": {
+    "lint": "standard */*.js test/**/*.js",
+    "test": "npm run lint && tap --timeout=120 test/test-*"
+  }
+}
